@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+build/
+instance/
+.webassets-cache
+.env
+venv/
+ENV/
+pyvenv.cfg
+.venv
+idea/
+.idea/
