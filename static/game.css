@@ -57,3 +57,48 @@
     height: 100%;
     object-fit: contain;
 }
+
+.popup__wrap {
+    padding: 40px 40px;
+    position: relative;
+    background-color: var(--green);
+    border-radius: 10px;
+    max-width: 400px;
+    min-height: 370px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.popup__figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup__figure-wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup__img-heart {
+    margin-right: 100px;
+}
+
+.popup__text {
+    text-align: center;
+    margin: 0;
+    white-space: pre-line;
+    font-size: 20px;
+    position: absolute;
+    right: 35%;
+    bottom: 40%;
+}
+
+.popup__heading {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--light-pink);
+    font-size: 35px;
+    font-family: Pribambas;
+    letter-spacing: 20px;
+}
