@@ -59,11 +59,11 @@ body {
     padding: 50px 50px;
 }
 
-.header {
+.info {
     margin-bottom: 50px;
 }
 
-.header__heading {
+.info__heading {
     text-align: center;
     color: var(--light-pink);
     font-size: 35px;
@@ -71,7 +71,7 @@ body {
     letter-spacing: 23px;
 }
 
-.header__par {
+.info__par {
     text-align: center;
     color: var(--light-pink);
 }
