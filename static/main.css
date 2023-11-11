@@ -12,16 +12,16 @@
 
 @font-face {
     font-family: Montserrat;
-    src: local(Montserrat-Regulard), url(../fonts/Montserrat-Regular.woff2) format("woff2");
-    src: url(../fonts/Montserrat-Regular.woff) format("woff");
+    src: local(Montserrat-Regulard), url(/static/fonts/Montserrat-Regular.woff2) format("woff2");
+    src: url(/static/fonts/Montserrat-Regular.woff) format("woff");
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: Pribambas;
-    src: local(Pribambas-Regular), url(../fonts/Pribambas-Regular.woff2) format("woff2");
-    src: url(../fonts/Pribambas-Regular.woff) format("woff");
+    src: local(Pribambas-Regular), url(static/fonts/Pribambas-Regular.woff2) format("woff2");
+    src: url(/static/fonts/Pribambas-Regular.woff) format("woff");
     font-weight: 400;
     font-display: swap;
 }

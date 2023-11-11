@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from models import db, User
 
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///memory_game.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -28,3 +27,8 @@ def user_create():
 def show_users():
     users = db.session.query(User).all()
     return render_template('test.html', users=users)
+
+
+@app.route('/game')
+def game():
+    return render_template('game.html')
