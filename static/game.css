@@ -1,0 +1,59 @@
+.game__cards {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 50%;
+}
+
+.card {
+    padding: 15px;
+    max-width: 152px;
+    width: 100%;
+    aspect-ratio: 1 / 1.5;
+    perspective: 1000px;
+}
+
+.card:hover .card__wrapper {
+    transform: rotateY(180deg);
+}
+
+.card__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.card__shirt,
+.card__front {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid var(--light-green);
+}
+
+.card__shirt {
+    transform: rotateY(180deg);
+}
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__img-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

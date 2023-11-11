@@ -19,7 +19,6 @@ def user_create():
         newuser = User(login=login, password_hash=password)
         db.session.add(newuser)
         db.session.commit()
-        print(login, password)
         return redirect('/show_users')
 
     return render_template('index.html')
