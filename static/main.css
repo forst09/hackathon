@@ -111,6 +111,8 @@ body {
     height: 35px;
     border: none;
     color: var(--pink);
+    font-family: Montserrat, sans-serif;
+    transition: background-color 0.2s ease, color 0.3s ease, outline-color 0.2s ease;
 }
 
 .form__btn {
@@ -122,6 +124,10 @@ body {
     width: 160px;
     height: 40px;
     text-align: center;
+    transition: background-color 0.2s ease, 
+    color 0.3s ease,
+    outline-color 0.2s ease, 
+    outline-width 0.2s ease;
 }
 
 .form__text {
@@ -131,34 +137,28 @@ body {
 .form__input:hover {
     background-color: var(--card-bg);
     color: var(--green);
-    transition: background-color 0.2s ease, color 0.3s ease;
 }
 
 .form__input:active {
     background-color: var(--card-bg);
-    transition: background-color 0.2s ease;
 }
 
 .form__input:focus {
     outline-color: var(--card-bg);
-    transition: outline-color 0.2s ease;
 }
 
 .form__btn:hover {
     background-color: var(--pink);
     color: #fff;
-    transition: background-color 0.2s ease, color 0.3s ease;
 }
 
 .form__btn:active {
     outline-color: #fff;
-    transition: outline-color 0.2s ease;
 }
 
 .form__btn:focus {
     outline-width: 2px;
     outline-color: #fff;
-    transition: outline-color 0.2s ease, outline-width 0.2s ease;
 }
 /* .wrapper {
     max-width: 1440px;
