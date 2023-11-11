@@ -13,3 +13,4 @@ pyvenv.cfg
 .venv
 idea/
 .idea/
+.DS_Store
