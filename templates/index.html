@@ -1,83 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+
+    <title>Memory Game</title>
 </head>
 
 <body>
 
-<header class="header">
+    <header class="header">
 
-</header>
+    </header>
 
-<main>
-    <h1 class="header__heading">Мемори</h1>
-    <p class="header__par">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+    <main>
+        <h1 class="header__heading">Мемори</h1>
+        <p class="header__par">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
 
-    <form 
-        action="" 
-        method="post"
-        class="form"
-    >
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">
-                Форма авторизации
-            </legend>
+        <form action="" method="post" class="form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">
+                    Форма авторизации
+                </legend>
 
-            <label 
-                for="login"
-                class="form__label"
-            >
-                Введите логин
-                <input 
-                    class="form__input"
-                    type="text" 
-                    name="login" 
-                    id="login"
-                >
-            </label>
+                <label for="login" class="form__label">
+                    Введите логин
+                    <input class="form__input" type="text" name="login" id="login">
+                </label>
 
-            <label 
-                for="password"
-                class="form__label"
-            >
-                Введите пароль
-                <input
-                    class="form__input"
-                    type="password" 
-                    name="password" 
-                    id="password"
-                >
-            </label>
+                <label for="password" class="form__label">
+                    Введите пароль
+                    <input class="form__input" type="password" name="password" id="password">
+                </label>
 
-            <button 
-                type="submit"
-                class="form__btn-create"
-            >
-                Создать аккаунт
-            </button>
+                <button type="submit" class="form__btn-create">
+                    Создать аккаунт
+                </button>
 
-            <p class="form__text">Уже есть аккаунт?</p>
+                <p class="form__text">Уже есть аккаунт?</p>
 
-            <button 
-                type="submit"
-                class="form__btn-come"
-            >
-                Войти
-            </button>
-        </fieldset>
-    </form>
+                <button type="submit" class="form__btn-come">
+                    Войти
+                </button>
+            </fieldset>
+        </form>
 
-</main>
+    </main>
 
-<footer>
+    <footer>
 
-</footer>
+    </footer>
 
 </body>
+
 </html>
