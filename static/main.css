@@ -187,38 +187,48 @@ body {
     padding: 30px;
     max-width: 320px;
   }
+
   .info {
     margin-bottom: 25px;
   }
+
   .info__heading {
     font-size: 25px;
     letter-spacing: 8.05px;
   }
+
   .info__par {
     font-size: 12px;
   }
+
   .form {
     border-radius: 10px;
     padding: 15px;
   }
+
   .form__fieldset {
     margin: 0;
     padding: 0;
   }
+
   .form__legend {
     font-size: 18px;
   }
+
   .form__label {
     font-size: 12px;
   }
+
   .form__input {
     max-width: 200px;
     font-size: 12px;
   }
+
   .form__btn {
     height: 32px;
     font-size: 12px;
   }
+
   .form__text {
     margin: 12px 0;
     font-size: 12px;
