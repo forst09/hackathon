@@ -197,35 +197,44 @@ body {
     padding: 15px;
     max-width: 320px;
   }
+
   .info {
     margin-bottom: 25px;
   }
+
   .info__heading {
     font-size: 25px;
     letter-spacing: 8.05px;
   }
+
   .info__par {
     font-size: 12px;
   }
+
   .form {
     border-radius: 10px;
     padding: 15px;
   }
+
   .form__fieldset {
     margin: 0;
     padding: 0;
   }
+
   .form__legend {
     font-size: 18px;
   }
+
   .form__label {
     font-size: 12px;
     width: 100%;
   }
+
   .form__input {
     font-size: 12px;
     width: 100%;
   }
+
   .form__btn {
     width: 100%;
     height: 35px;
@@ -233,6 +242,7 @@ body {
     line-height: 15px;
     padding: 10px;
   }
+
   .form__text {
     margin: 12px 0;
     font-size: 12px;
