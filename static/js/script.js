@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let counterForShow = 0;
 
     const isCardActive = (e) => {
-        counterForActive++;
         e.target.closest('.card').classList.add('active');
-        if (counterForActive > 1) {
+        counterForActive++;
+        if (counterForActive == 2) {
             counterForMove++;
             activeCards = document.querySelectorAll('.card.active:not(.show)');
             console.log(activeCards);
@@ -20,11 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 activeCards.forEach(activeCard => {
                     activeCard.removeEventListener('click', isCardActive);
                     activeCard.classList.add('show');
-                })
+                });
+                activeCards[0].removeEventListener('click', isCardActive);
+                activeCards[1].removeEventListener('click', isCardActive);
+                counterForActive = 0;
+                activeCards = [];
             }
             else {
                 const activeTimer = setTimeout(function () {
-                    console.log('not similar cards');
                     activeCards.forEach(activeCard => {
                         activeCard.classList.remove('active');
                     })
@@ -34,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             counterForActive = 0;
         }
 
-        console.log(counterForShow);
         if (counterForShow === cards.length / 2) {
             if (winPopup) {
                 winPopup.querySelector('#move').textContent = counterForMove;
@@ -46,5 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => {
         card.addEventListener('click', isCardActive);
+    });
+
+    function closePopup(popup) {
+        popup.classList.remove('active');
+    }
+
+    winPopup.querySelector('.popup__close').addEventListener('click', () => {
+        closePopup(winPopup);
+    });
+
+    winPopup.addEventListener('click', e => {
+        if (e.target === winPopup) {
+            closePopup(winPopup);
+        }
     })
 });
