@@ -18,7 +18,7 @@ def user_create():
         newuser = User(login=login, password_hash=password)
         db.session.add(newuser)
         db.session.commit()
-        return redirect('/show_users')
+        return redirect('/game')
 
     return render_template('index.html')
 
