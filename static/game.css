@@ -70,7 +70,7 @@
     transition: opacity 0.5s;
 }
 
-.popup .active {
+.popup.active {
     opacity: 1;
     pointer-events: all;
     transition: opacity 0.5s;
@@ -78,8 +78,8 @@
 
 .popup__wrapper {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     min-width: 400px;
 }
 
@@ -108,7 +108,7 @@
     width: 90px;
     height: 90px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .popup__img-heart {
@@ -121,7 +121,7 @@
     white-space: pre-line;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: block;
 }
 
@@ -129,7 +129,7 @@
     position: relative;
 }
 
-.popup__content::before {
+.popup__wrap::before {
     content: "";
     width: 100px;
     height: 100px;
@@ -139,11 +139,11 @@
     background-position: center;
     background-size: contain;
     position: absolute;
-    right: 130px;
-    bottom: 70px;
+    left: 20px;
+    bottom: 50%;
 }
 
-.popup__content::after {
+.popup__wrap::after {
     content: "";
     width: 100px;
     height: 100px;
@@ -153,8 +153,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 130px;
-    bottom: 70px;
+    right: 20px;
+    bottom: 50%;
 }
 
 .popup__heading {
@@ -166,4 +166,64 @@
     font-weight: 400;
     letter-spacing: 8.05px;
     margin: 0;
+    margin-bottom: 20px;
+}
+
+.popup__btn {
+    background-color: var(--light-pink);
+    color: var(--card-bg);
+    border: none;
+    outline: 1px solid var(--card-bg);
+    border-radius: 10px;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+}
+
+/* @media screen and (max-width: 944px) {
+}
+@media screen and (max-width: 720px) {
+} */
+@media screen and (max-width: 540px) {
+
+    .popup {
+        width: 100%;
+    }
+
+    .popup__wrapper {
+        min-width: 300px;
+        padding: 10px;
+    }
+
+    .popup__heading {
+        font-size: 25px;
+    }
+
+    .popup__text {
+        font-size: 12px;
+    }
+
+    .popup__btn {
+        font-size: 12px;
+        height: 32px;
+    }
+
+    .popup__wrap::after {
+        width: 70px;
+        height: 70px;
+    }
+
+    .popup__wrap::before {
+        width: 70px;
+        height: 70px;
+    }
+
+    .popup__figure {
+        width: 70px;
+        height: 70px;
+    }
+
+    .popup__wrap {
+        min-height: 300px;
+    }
 }
