@@ -9,33 +9,36 @@ document.addEventListener('DOMContentLoaded', () => {
     let counterForShow = 0;
 
     const isCardActive = (e) => {
-        e.target.closest('.card').classList.add('active');
-        counterForActive++;
-        if (counterForActive == 2) {
-            counterForMove++;
-            activeCards = document.querySelectorAll('.card.active:not(.show)');
-            console.log(activeCards);
-            if (activeCards[0].querySelector('.card__img-img').getAttribute('src') === activeCards[1].querySelector('.card__img-img').getAttribute('src')) {
-                counterForShow++;
-                activeCards.forEach(activeCard => {
-                    activeCard.removeEventListener('click', isCardActive);
-                    activeCard.classList.add('show');
-                });
-                activeCards[0].removeEventListener('click', isCardActive);
-                activeCards[1].removeEventListener('click', isCardActive);
-                counterForActive = 0;
-                activeCards = [];
-            }
-            else {
-                const activeTimer = setTimeout(function () {
+        const hehe = setTimeout(function () {
+            e.target.closest('.card').classList.add('active');
+            counterForActive++;
+            if (counterForActive == 2) {
+                counterForMove++;
+                activeCards = document.querySelectorAll('.card.active:not(.show)');
+                console.log(activeCards);
+                if (activeCards[0].querySelector('.card__img-img').getAttribute('src') === activeCards[1].querySelector('.card__img-img').getAttribute('src')) {
+                    counterForShow++;
+                    console.log(counterForShow);
                     activeCards.forEach(activeCard => {
-                        activeCard.classList.remove('active');
-                    })
-                }, 1000);
+                        activeCard.removeEventListener('click', isCardActive);
+                        activeCard.classList.add('show');
+                    });
+                    activeCards[0].removeEventListener('click', isCardActive);
+                    activeCards[1].removeEventListener('click', isCardActive);
+                    counterForActive = 0;
+                    activeCards = [];
+                }
+                else {
+                    const activeTimer = setTimeout(function () {
+                        activeCards.forEach(activeCard => {
+                            activeCard.classList.remove('active');
+                        })
+                    }, 700);
 
+                }
+                counterForActive = 0;
             }
-            counterForActive = 0;
-        }
+        }, 200)
 
         if (counterForShow === cards.length / 2) {
             if (winPopup) {
