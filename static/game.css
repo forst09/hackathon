@@ -58,24 +58,6 @@
     object-fit: contain;
 }
 
-/* .popup {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-}
-
-.popup:target {
-    opacity: 1; 
-	pointer-events: auto;
-    overflow-y: auto;
-} */
-
 .popup {
     position: fixed;
     top: 0;
@@ -83,28 +65,22 @@
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    /* opacity: 0; */
+    opacity: 0;
     pointer-events: none;
-    transition: 0.5s all;
+    transition: opacity 0.5s;
 }
 
-.popup.active {
+.popup .active {
     opacity: 1;
     pointer-events: all;
-    transition: 0.5s all;
+    transition: opacity 0.5s;
 }
 
 .popup__wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 0.5s all;
-}
-
-.popup__wrapper.active {
-    transform: translate(-50%, -50%) scale(1);
-    transition: 0.5s all;
+    top: 25%;
+    left: 25%;
+    min-width: 400px;
 }
 
 .popup__wrap {
@@ -120,7 +96,7 @@
 
 }
 
-.close-popup {
+.popup__close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -153,12 +129,12 @@
     position: relative;
 }
 
-.popup__content:before {
+.popup__content::before {
     content: "";
     width: 100px;
     height: 100px;
     display: block;
-    background-image: url(../img/svg/010-heart.svg);
+    background-image: url(../static/img/svg/010-heart.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -167,12 +143,12 @@
     bottom: 70px;
 }
 
-.popup__content:after {
+.popup__content::after {
     content: "";
     width: 100px;
     height: 100px;
     display: block;
-    background-image: url(../img/svg/011-balloon.svg);
+    background-image: url(../static/img/svg/011-balloon.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
