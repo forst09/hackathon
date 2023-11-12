@@ -32,5 +32,4 @@ def show_users():
 
 @app.route('/game')
 def game():
-
     return render_template('game.html')
