@@ -18,6 +18,7 @@ def user_create():
         newuser = User(login=login, password_hash=password)
         db.session.add(newuser)
         db.session.commit()
+
         return redirect('/game')
 
     return render_template('index.html')
@@ -31,4 +32,5 @@ def show_users():
 
 @app.route('/game')
 def game():
+
     return render_template('game.html')
