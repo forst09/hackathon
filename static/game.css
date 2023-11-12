@@ -1,104 +1,104 @@
 .game__cards {
-  gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 708px;
-  margin-left: auto;
-  width: 100%;
-  gap: 20px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 708px;
+    margin-left: auto;
+    width: 100%;
+    gap: 20px;
 }
 
 .card {
-  /* padding: 15px; */
-  max-width: 162px;
-  width: 100%;
-  aspect-ratio: 1 / 1.5;
-  perspective: 1000px;
+    /* padding: 15px; */
+    max-width: 162px;
+    width: 100%;
+    aspect-ratio: 1 / 1.5;
+    perspective: 1000px;
 }
 
 .card.active .card__wrapper {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .card__wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  border: 3px solid var(--light-green);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: 3px solid var(--light-green);
 }
 
 .card__shirt,
 .card__front {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: var(--card-bg);
-  overflow: hidden;
-  border-radius: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: var(--card-bg);
+    overflow: hidden;
+    border-radius: 15px;
 }
 
-.card__shirt {
-  transform: rotateY(180deg);
+.card__front {
+    transform: rotateY(180deg);
 }
 
 .card__img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card__img-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
 }
 
 .popup.active {
-  opacity: 1;
-  pointer-events: all;
-  transition: opacity 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.5s;
 }
 
 .popup__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 400px;
     transform: translate(-50%, -50%);
 }
 
 .popup__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 40px;
-  background-color: var(--green);
-  border-radius: 10px;
-  max-width: 400px;
-  min-height: 370px;
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px;
+    background-color: var(--green);
+    border-radius: 10px;
+    max-width: 400px;
+    min-height: 370px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .popup__close {
@@ -123,6 +123,7 @@
         left: 10%;
         animation-timing-function: ease-in;
     }
+
     80% {
         transform: scale(1.3);
     }
@@ -142,37 +143,39 @@
 }
 
 .popup__img-heart {
-  margin-right: 100px;
+    margin-right: 100px;
 }
 
 .popup__text {
-  text-align: center;
-  margin: 0;
-  white-space: pre-line;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  display: block;
+    text-align: center;
+    margin: 0;
+    white-space: pre-line;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    display: block;
 }
 
 .popup__content {
-  position: relative;
+    position: relative;
 }
 
 @keyframes anime {
     0% {
         transform: translateY(0%);
     }
+
     50% {
         transform: translateY(20%);
     }
+
     100% {
         transform: translateY(0%);
     }
 }
 
 .popup__wrap::before {
-    content: "";
+    content: '';
     width: 100px;
     height: 100px;
     display: block;
@@ -183,8 +186,8 @@
     position: absolute;
     left: 20px;
     bottom: 50%;
-    animation: anime 5s infinite linear;
 }
+
 
 .popup__wrap::after {
     content: "";
@@ -198,20 +201,18 @@
     position: absolute;
     right: 20px;
     bottom: 50%;
-/*     right: -90px;
-    bottom: 70px; */
     animation: anime 5s infinite linear;
 }
 
 .popup__heading {
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--light-pink);
-  font-size: 35px;
-  font-family: Pribambas;
-  font-weight: 400;
-  letter-spacing: 8.05px;
-  margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--light-pink);
+    font-size: 35px;
+    font-family: Pribambas;
+    font-weight: 400;
+    letter-spacing: 8.05px;
+    margin: 0;
     margin-bottom: 20px;
 }
 
@@ -225,7 +226,7 @@
     height: 40px;
     text-align: center;
     transition: background-color 0.2s ease, color 0.3s ease,
-    outline-color 0.2s ease, outline-width 0.2s ease;
+        outline-color 0.2s ease, outline-width 0.2s ease;
 }
 
 .popup__btn:hover {
@@ -291,132 +292,145 @@
 }
 
 .game__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 40px;
-  gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    gap: 40px;
 }
 
 .game__info {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 45px;
-  margin: auto;
-  width: 400px;
-  height: 370px;
-  background: #9ad0a9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background-image: url(../static/img/001-heart.svg);
-  background-repeat: no-repeat;
-  background-size: 113px 119px;
-  background-position: center 21px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+    margin: auto;
+    width: 400px;
+    height: 370px;
+    background: #9ad0a9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-image: url(../static/img/001-heart.svg);
+    background-repeat: no-repeat;
+    background-size: 113px 119px;
+    background-position: center 21px;
 }
 
 .game__info-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  color: #f57486;
-  font-family: Pribambas;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.6px;
-  margin-top: 161px;
-}
-.game__button {
-  content: '';
-  padding: 12px 22px;
-  color: var(--Color, #fff);
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  border-radius: 10px;
-  border: 1px solid var(--Color, #fff);
-  background: #f57486;
-}
-.game__button::after {
-  content: 'Начать заново';
-}
-
-@media screen and (max-width: 1030px) {
-  .game__info {
-    max-width: 350px;
-    height: 370px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .game__wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    padding: 40px;
-    gap: 20px;
-  }
-  .game__cards {
-    grid-row-start: 2;
-    gap: 15px;
-  }
-  .game__info {
-    max-width: 708px;
-    width: 100%;
-    height: 74px;
-    grid-row-start: 1;
-    background-image: none;
-    padding: 12px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .game__button {
-    width: 150px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 15px;
-  }
-  .game__info-text {
-    margin: 0 auto;
-    padding: 0;
-    flex-direction: row;
-    gap: 5px;
-  }
-}
-@media screen and (max-width: 520px) {
-  .game__info-text {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 3.22px;
+    display: flex;
     flex-direction: column;
-    gap: 5px;
-  }
-  .game__info-text span {
+    align-items: center;
+    gap: 25px;
+    color: #f57486;
+    font-family: Pribambas;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 4.6px;
-  }
-  .game__button {
-    width: 90px;
-  }
-  .game__button::after {
-    content: 'заново';
-  }
-  .game__wrapper {
-    padding: 15px;
-  }
-  .game__info {
-    gap: 5px;
-  }
+    margin-top: 161px;
+}
+
+.game__button {
+    content: '';
+    padding: 12px 22px;
+    color: var(--Color, #fff);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 10px;
+    border: 1px solid var(--Color, #fff);
+    background: #f57486;
+}
+
+.game__button::after {
+    content: 'Начать заново';
+}
+
+@media screen and (max-width: 1030px) {
+    .game__info {
+        max-width: 350px;
+        height: 370px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .game__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .game__cards {
+        grid-row-start: 2;
+        gap: 15px;
+    }
+
+    .game__info {
+        max-width: 708px;
+        width: 100%;
+        height: 74px;
+        grid-row-start: 1;
+        background-image: none;
+        padding: 12px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .game__button {
+        width: 150px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 15px;
+    }
+
+    .game__info-text {
+        margin: 0 auto;
+        padding: 0;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .game__info-text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.22px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .game__info-text span {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 4.6px;
+    }
+
+    .game__button {
+        width: 90px;
+    }
+
+    .game__button::after {
+        content: 'заново';
+    }
+
+    .game__wrapper {
+        padding: 15px;
+    }
+
+    .game__info {
+        gap: 5px;
+    }
 }
