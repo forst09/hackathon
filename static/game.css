@@ -13,7 +13,7 @@
     perspective: 1000px;
 }
 
-.card:hover .card__wrapper {
+.card.active .card__wrapper {
     transform: rotateY(180deg);
 }
 
