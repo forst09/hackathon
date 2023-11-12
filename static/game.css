@@ -70,7 +70,7 @@
     transition: opacity 0.5s;
 }
 
-.popup .active {
+.popup.active {
     opacity: 1;
     pointer-events: all;
     transition: opacity 0.5s;
@@ -78,9 +78,10 @@
 
 .popup__wrapper {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     min-width: 400px;
+    transform: translate(-50%, -50%);
 }
 
 .popup__wrap {
@@ -139,7 +140,7 @@
     background-position: center;
     background-size: contain;
     position: absolute;
-    right: 130px;
+    left: -100px;
     bottom: 70px;
 }
 
@@ -153,7 +154,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 130px;
+    right: -90px;
     bottom: 70px;
 }
 
