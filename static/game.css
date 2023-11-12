@@ -58,26 +58,81 @@
     object-fit: contain;
 }
 
+/* .popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+.popup:target {
+    opacity: 1; 
+	pointer-events: auto;
+    overflow-y: auto;
+} */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.5s all;
+}
+
+.popup__wrapper.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
 .popup__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 40px 40px;
-    position: relative;
     background-color: var(--green);
     border-radius: 10px;
     max-width: 400px;
     min-height: 370px;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
 .popup__figure {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup__figure-wrap {
-    display: flex;
-    justify-content: space-around;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .popup__img-heart {
@@ -89,9 +144,41 @@
     margin: 0;
     white-space: pre-line;
     font-size: 20px;
-    position: absolute;
-    right: 35%;
-    bottom: 40%;
+    font-weight: 400;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.popup__content {
+    position: relative;
+}
+
+.popup__content:before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-image: url(../img/svg/010-heart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position:absolute;
+    right: 130px;
+    bottom: 70px;
+    }
+
+.popup__content:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-image: url(../img/svg/011-balloon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    left: 130px;
+    bottom: 70px;
 }
 
 .popup__heading {
@@ -100,5 +187,8 @@
     color: var(--light-pink);
     font-size: 35px;
     font-family: Pribambas;
-    letter-spacing: 20px;
+    font-weight: 400;
+    letter-spacing: 8.05px;
+    margin: 0;
 }
+
