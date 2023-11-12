@@ -140,8 +140,8 @@
     background-position: center;
     background-size: contain;
     position: absolute;
-/*     left: -100px;
-    bottom: 70px; */
+    left: 20px;
+    bottom: 50%;
 }
 
 .popup__wrap::after {
@@ -154,8 +154,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-/*     right: -90px;
-    bottom: 70px; */
+    right: 20px;
+    bottom: 50%;
 }
 
 .popup__heading {
