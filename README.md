@@ -43,3 +43,6 @@ python -m pip install -r requirements.txt
 5. После чего до проекта можно будет достучаться по  http://127.0.0.1:5000 (по умолчанию на порту 5000)
 
 ___
+
+## Тут наш проект бережливо задеплоеный на render
+[Memory Game](https://memory-game-6880.onrender.com)
