@@ -2,6 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const winPopup = document.querySelector('.popup');
+    const btnReset = document.querySelectorAll('[data-reset]');
+    const currentMove = document.querySelector('#moveCurrent');
     let cards = document.querySelectorAll('.card');
     let activeCards;
     let counterForActive = 0;
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             counterForActive++;
             if (counterForActive == 2) {
                 counterForMove++;
+                currentMove.textContent = counterForMove;
+
                 activeCards = document.querySelectorAll('.card.active:not(.show)');
                 console.log(activeCards);
                 if (activeCards[0].querySelector('.card__img-img').getAttribute('src') === activeCards[1].querySelector('.card__img-img').getAttribute('src')) {
@@ -38,20 +42,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 counterForActive = 0;
             }
-        }, 200)
 
-        if (counterForShow === cards.length / 2) {
-            if (winPopup) {
-                winPopup.querySelector('#move').textContent = counterForMove;
-                winPopup.classList.add('active');
+            if (counterForShow === cards.length / 2) {
+                console.log('hehe')
+                if (winPopup) {
+                    winPopup.querySelector('#move').textContent = counterForMove;
+                    winPopup.classList.add('active');
+                }
             }
-        }
+        }, 200)
 
     }
 
     cards.forEach(card => {
         card.addEventListener('click', isCardActive);
     });
+
+    function shuffle() {
+        const shuffleTimer = setTimeout(function () {
+            cards.forEach((card) => {
+                let randomPosotion = Math.floor(0.5 - Math.random());
+                card.style.order = randomPosotion;
+            });
+        }, 500)
+    }
+
+    if (btnReset.length > 0) {
+        btnReset.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('popup__btn')) {
+                    winPopup.classList.remove('active');
+                };
+                currentMove.textContent = 0;
+                cards.forEach(card => {
+                    card.classList.remove('active', 'show');
+                });
+                activeCards = [];
+                counterForActive = 0;
+                counterForMove = 0;
+                counterForShow = 0;
+                shuffle();
+            });
+        })
+    }
 
     function closePopup(popup) {
         popup.classList.remove('active');
